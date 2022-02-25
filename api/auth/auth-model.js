@@ -10,8 +10,13 @@ function getUser(id) {
         .where({ id })
         .first()
 }
-
+function getUsername(username) {
+    return db('users')
+        .where('username', username)
+        .first()
+}
 module.exports = {
     add,
     getUser,
+    getUsername,
 }
